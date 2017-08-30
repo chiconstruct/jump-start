@@ -1,0 +1,36 @@
+// import gridle
+@import "gridle/gridle-flex";
+
+$gutter: 20px;
+//SETTING UP THE GRID
+$settings: (
+  content: 12;
+  gutter-width: $gutter;
+  direction: rtl;
+);
+
+@include gridle_setup($settings);
+
+//REGISTER STATES
+@include gridle_register_state( mobile, (
+  max-width: 480px
+));
+
+@include gridle_register_state( xs, (
+  max-width: 768px
+));
+
+@include gridle_register_state( sm, (
+  max-width: 992px
+));
+
+@include gridle_register_state( md, (
+  max-width: 1200px
+));
+
+@include gridle_register_state( lg, (
+  min-width: 1201px
+));
+
+//GENERATE CLASSES
+@include gridle_generate_classes();
