@@ -1,0 +1,33 @@
+
+/* FONTS */
+@import url('https://fonts.googleapis.com/css?family=Monoton|Open+Sans:300,400,600,700');
+
+
+/* GENERAL */
+html {
+  font-size: 14px;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+header {
+  padding: 1.5rem 3rem;
+
+  .navigation-bar {
+    font-size: 1.1rem;
+    @include set-flex-container;
+     li {
+       @include set-flex-grow-shrink;
+       a {
+         text-decoration: none;
+         font-weight: 600;
+         color: black;
+       }
+       a:hover {
+         color: $hover-color;
+       }
+     } /* end li */
+  } /* end navigation-bar */
+} /* end header */

@@ -1,0 +1,51 @@
+// import gridle
+@import "../../node_modules/gridle/sass/gridle/gridle-flex";
+
+$gutter : 30px;
+// setting up the grid
+$settings : (
+    context : 12,
+    gutter-width : $gutter,
+    direction : ltr,
+    states-classes : false,
+    classes-prefix : ''
+);
+@include gridle_setup($settings);
+
+// make the use of media queries really easy
+@include gridle_register_state ( tablet , (
+  min-width : 360px,
+  max-width : 992px
+) ) ;
+
+@include gridle_register_state ( mob , (
+    max-width : 480px
+) ) ;
+
+@include gridle_register_state ( xs , (
+    min-width : 481px,
+    max-width : 768px
+) ) ;
+
+@include gridle_register_state ( sm , (
+    min-width : 769px,
+    max-width : 992px
+) ) ;
+
+@include gridle_register_state ( md , (
+    min-width : 993px,
+    max-width : 1200px
+) ) ;
+
+@include gridle_register_state ( lg , (
+    min-width : 1201px
+) ) ;
+
+// generate classes :
+@include gridle_generate_classes ( );
+
+// container
+.container {
+  max-width: 960px;
+  margin: auto;
+}

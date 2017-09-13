@@ -1,0 +1,11 @@
+@mixin set-flex-container($justify: center, $align: center, $direction: row) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+@mixin set-flex-grow-shrink($value: 1) {
+  flex-grow: $value;
+  flex-shrink: $value;
+}
