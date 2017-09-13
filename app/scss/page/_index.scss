@@ -42,6 +42,15 @@ a {
   cursor: pointer;
 }
 
+p {
+  padding-top: 10px;
+  line-height: 1.5;
+}
+
+.title {
+  margin-bottom: 20px;
+}
+
 .button {
   padding: 1.5rem 3.5rem;
   color: white;
@@ -101,13 +110,14 @@ header {
       .title {
         font-family: $font-monoton;
         font-size: 7.1rem;
+        margin-bottom: 0;
       }
 
       .content {
         font-size: 1.5rem;
         max-width: 50%;
         line-height: 1.5;
-        padding: 2.8rem 0;
+        padding: 2.7rem 0 2.8rem;
         margin: auto;
       }
     } /* end content-container */
@@ -116,37 +126,37 @@ header {
 
 /***** FEATURE *****/
 .feature {
-  .row {
-    .container {
-      .title {
-        margin-bottom: 20px;
+  .container {
+    .category {
+      .heading {
+        padding-bottom: 10px;
       }
 
-      .project-container {
-        .project-title {
-          p {
-            padding-top: 10px;
-            line-height: 1.5;
-          }
-        }
-
-        .category {
-          .heading {
-            padding-bottom: 10px;
-          }
-
-          .content {
-            ul {
-              li {
-                a {
-                  font-weight: 400;
-                  line-height: 1.3;
-                }
-              }
+      .content {
+        ul {
+          li {
+            a {
+              font-weight: 400;
+              line-height: 1.3;
             }
           }
         }
-      } /* end project-container */
-    } /* end container */
-  } /* end row */
+      } /* end content */
+    } /* end category */
+  } /* end container */
 } /* feature */
+
+/***** PROJECT *****/
+.project {
+  .container {
+    .project-container {
+      .row {
+        .project {
+          .content-container {
+            margin-top: 10px;
+          }
+        } /* end project */
+      } /* end row */
+    } /* end project-container */
+  } /* end container */
+} /* end project */
