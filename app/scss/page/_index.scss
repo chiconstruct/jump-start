@@ -13,8 +13,8 @@ body {
 }
 
 img {
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 section {
@@ -45,6 +45,10 @@ a {
 p {
   padding-top: 10px;
   line-height: 1.5;
+}
+
+.margin-auto {
+  margin: auto;
 }
 
 .container {
@@ -134,7 +138,7 @@ header {
       padding: 11.85rem 0;
       text-align: center;
       color: white;
-      min-height: 282px;
+      height: 282px;
 
       .title {
         font-family: $font-monoton;
@@ -183,7 +187,7 @@ header {
       .row {
         .project-detail {
           .content-container {
-            margin-top: 10px;
+            margin-top: 20px;
           }
         } /* end project */
       } /* end row */
@@ -224,6 +228,14 @@ header {
     margin: auto;
   }
 
+
+}
+
+@media screen and (max-width: $break-tablet) {
+  .container {
+    max-width: 730px;
+  }
+
   header {
     padding: 0;
 
@@ -233,16 +245,68 @@ header {
           display: block;
 
           li {
-            margin: 1rem;
+            margin: 1rem 0;
           }
+        } /* end navigation-bar */
+      } /* end row */
+    } /* end container */
+  } /* end header */
+
+  .feature {
+    .container {
+      .feature-project {
+        .image-container {
+          margin-bottom: 20px;
+        }
+      } /* end feature-project */
+    } /* end container */
+  } /* end feature */
+
+  .project {
+    margin-bottom: 0;
+
+    .container {
+      .project-container {
+        .project-detail {
+          margin-bottom: 4rem;
         }
       }
-    }
-  }
+    } /* end container */
+  } /* end project */
 }
 
-@media screen and (max-width: $break-tablet) {
+@media screen and (max-width: $break-mobile) {
   .container {
-    max-width: 750px;
+    max-width: 400px;
+  }
+
+  .masthead {
+    #slick-slider {
+      .content-container {
+        padding: 11.85rem 0;
+        text-align: center;
+        color: white;
+        min-height: 282px;
+
+        .title {
+          font-size: 4rem;
+
+        }
+
+        .content {
+          font-size: 1.5rem;
+          max-width: 50%;
+          line-height: 1.5;
+          padding: 1rem 0 2.8rem;
+          margin: auto;
+        }
+      } /* end content-container */
+    } /* end slick-slider */
+  } /* end masthead */
+}
+
+@media screen and (max-width: $break-xs) {
+  .container {
+    max-width: 340px;
   }
 }
